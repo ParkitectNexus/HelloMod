@@ -1,0 +1,28 @@
+﻿using UnityEngine;
+namespace HelloMod
+{
+    class Main : IMod
+    {
+        private GameObject _go;
+        public void onEnabled()
+        {
+            _go = new GameObject();
+            _go.AddComponent<HelloBehaviour>();
+        }
+
+        public void onDisabled()
+        {
+            UnityEngine.Object.Destroy(_go);
+        }
+
+        public string Name
+        {
+            get { return "Hello Mod"; }
+        }
+
+        public string Description
+        {
+            get { return "Validates if mods are working on your PC"; }
+        }
+    }
+}
