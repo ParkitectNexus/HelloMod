@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 namespace HelloMod
 {
-    class Main : IMod
+    public class Main : IMod
     {
         private GameObject _go;
         public void onEnabled()
