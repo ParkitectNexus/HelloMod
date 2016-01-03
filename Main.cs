@@ -4,6 +4,9 @@ namespace HelloMod
     public class Main : IMod
     {
         private GameObject _go;
+        
+        public string Identifier { get; set; }
+        
         public void onEnabled()
         {
             _go = new GameObject();
